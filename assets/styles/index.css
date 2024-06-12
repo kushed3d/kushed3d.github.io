@@ -4,7 +4,7 @@
     src: url('../fonts/SofiaSansSemiCondensed-Black.ttf');
 }
 
-.bg {  background: url('../img/Binary.gif') no-repeat center center fixed; background-repeat: no-repeat;   position: absolute;  z-index: -1;  height: 100%;  width: 100%;  -webkit-background-size: cover; }
+.bg {  background: url('../img/Binary.mp4') no-repeat center center fixed; background-repeat: no-repeat;   position: absolute;  z-index: -1;  height: 100%;  width: 100%;  -webkit-background-size: cover; }
 .wrapper-title { padding-bottom: 3px; text-align: center; margin-bottom: -0px; transition: all 0.5s ease; font-size: 65px; color: rgba(255, 255, 255, 0.92); text-shadow: 1px 1px 2px black, 0 0 10px rgb(0, 0, 0), 0 0 3px rgb(0, 0, 0);}
 .wrapper-sidetitle {height: 30px;padding-bottom:3px; text-align: center; margin-bottom: -0px; transition: all 0.5s ease; font-size: 15px; color: rgba(255, 255, 255, 0.92); text-shadow: 1px 1px 2px black, 0 0 10px rgb(0, 0, 0), 0 0 3px rgb(0, 0, 0);}
 .wrapper-title:hover {transition: all 0.5s ease; color: hsl(233, 100%, 58%); cursor: pointer;}
