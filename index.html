@@ -1,84 +1,111 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="assets/styles/index.css">
-        <link rel="icon" href="./assets/img/logo.ico" type="image/x-icon">
-        <title>Kushed3d </title>
-    </head>
-    <body>
-        <div class="bg"></div>
-        <div class="wrapper">
-            <h1 onClick='runMusic()' class="wrapper-title">Kushed3d</h1>
-            <h1 class="wrapper-sidetitle"><span id="random"></sp</td></h1>
+<head>
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="icon" href="./assets/img/logo.ico" type="image/x-icon">
+    <title>Kushed3d </title>
+    <style>
+        .bg {
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
 
-            <table class="table-header">
-                <tr>
-                    <td class="wrapper-table">
-                        <img onclick="window.open('https://discord.com/users/625461246040342529')" src="assets/img/discord.png" alt="My Discord" class="wrapper-image" title="My Discord Profile">
-                    </td>
-                    <td class="wrapper-table">
-                        <img onclick="window.open('https://github.com/kushed3d')" src="assets/img/github.png" alt="My GitHub" class="wrapper-image" title="My GitHub Profile">
-                    </td>
-                    <td class="wrapper-table">
-                        <img onclick="window.open('https://www.instagram.com/kushed3d/')" src="assets/img/insta.png" alt="My Instagram" class="wrapper-image" title="My Instagram Profile">
-                    </td>
-                    <td class="wrapper-table">
-                        <img onclick="window.open('https://cash.app/$randomusername5')" src="assets/img/cashapp.png" alt="My Cashapp" class="wrapper-image" title="My Cash App">
-                    </td>
-                    <td class="wrapper-table">
-                        <img onclick="window.open('https://www.tiktok.com/@.kushed?_t=8n9Fn13RnYs&_r=1')" src="assets/img/tiktok.png" alt="My tik tok" class="wrapper-image" title="My Tiktok">
-                    </td>
-            <footer>
-                <p class="footer-text"> </a></p>
-            </footer>
-        </div>
-    </body>
-    <script>
-        let radnomSubprefix = [
-            `Cybersec / Comp Sci`,
-            `Soldering Is Fun!`,
-            `Ducky Scripts Made By @Kushed3d`,
-            `CAD / comp aided design`,
-            `@kushed3d on insta!`,
-            `Add Me On Discord @Kushed3d`,
-        ]
-        function typeEffect() {
-            let random = document.getElementById('random');
-            let randomSubprefix = radnomSubprefix[Math.floor(Math.random() * radnomSubprefix.length)];
+        .bg video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <video autoplay muted loop>
+            <source src="../img/Binary.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="wrapper">
+        <h1 onClick='runMusic()' class="wrapper-title">Kushed3d</h1>
+        <h1 class="wrapper-sidetitle"><span id="random"></span></h1>
 
-            for (let i = 0; i <= randomSubprefix.length; i++) {
+        <table class="table-header">
+            <tr>
+                <td class="wrapper-table">
+                    <img onclick="window.open('https://discord.com/users/625461246040342529')" src="assets/img/discord.png" alt="My Discord" class="wrapper-image" title="My Discord Profile">
+                </td>
+                <td class="wrapper-table">
+                    <img onclick="window.open('https://github.com/kushed3d')" src="assets/img/github.png" alt="My GitHub" class="wrapper-image" title="My GitHub Profile">
+                </td>
+                <td class="wrapper-table">
+                    <img onclick="window.open('https://www.instagram.com/kushed3d/')" src="assets/img/insta.png" alt="My Instagram" class="wrapper-image" title="My Instagram Profile">
+                </td>
+                <td class="wrapper-table">
+                    <img onclick="window.open('https://cash.app/$randomusername5')" src="assets/img/cashapp.png" alt="My Cashapp" class="wrapper-image" title="My Cash App">
+                </td>
+                <td class="wrapper-table">
+                    <img onclick="window.open('https://www.tiktok.com/@.kushed?_t=8n9Fn13RnYs&_r=1')" src="assets/img/tiktok.png" alt="My tik tok" class="wrapper-image" title="My Tiktok">
+                </td>
+            </tr>
+        </table>
+        <footer>
+            <p class="footer-text"> </a></p>
+        </footer>
+    </div>
+</body>
+<script>
+    let radnomSubprefix = [
+        `Cybersec / Comp Sci`,
+        `Soldering Is Fun!`,
+        `Ducky Scripts Made By @Kushed3d`,
+        `CAD / comp aided design`,
+        `@kushed3d on insta!`,
+        `Add Me On Discord @Kushed3d`,
+    ]
+    function typeEffect() {
+        let random = document.getElementById('random');
+        let randomSubprefix = radnomSubprefix[Math.floor(Math.random() * radnomSubprefix.length)];
+
+        for (let i = 0; i <= randomSubprefix.length; i++) {
+            setTimeout(() => {
+                random.innerHTML = randomSubprefix.substring(0, i);
+            }, i * 25);
+        }
+        setTimeout(() => {
+            for (let i = randomSubprefix.length; i >= 0; i--) {
                 setTimeout(() => {
                     random.innerHTML = randomSubprefix.substring(0, i);
-                }, i * 25);
+                    if (i == 0) typeEffect();
+                }, (randomSubprefix.length - i) * 25);
             }
+        }, 4000);
+    }
+    typeEffect();
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    let wrapper = document.querySelector('.wrapper');
+    wrapper.style.opacity = 0;
+    setTimeout(() => {
+        for (let i = 0; i < 25; i++) {
             setTimeout(() => {
-                for (let i = randomSubprefix.length; i >= 0; i--) {
-                    setTimeout(() => {
-                        random.innerHTML = randomSubprefix.substring(0, i);
-                        if (i == 0) typeEffect();
-                    }, (randomSubprefix.length - i) * 25);
-                }
-            }, 4000);
+                wrapper.style.opacity = i / 25;
+            }, i * 22);
         }
-        typeEffect();
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        let wrapper = document.querySelector('.wrapper');
-        wrapper.style.opacity = 0;
-        setTimeout(() => {
-            for (let i = 0; i < 25; i++) {
-                setTimeout(() => {
-                    wrapper.style.opacity = i / 25;
-                }, i * 22);
-            }
-        }, 100);
-        let alreadyRunning = false;
-        function runMusic() {
-            if (alreadyRunning) return;
-            alreadyRunning = true;
-            var audio = new Audio('assets/music/music.mp3');
-            audio.volume = 0.1;
-            audio.loop = true;
-            audio.play();
-        }
-    </script>
+    }, 100);
+    let alreadyRunning = false;
+    function runMusic() {
+        if (alreadyRunning) return;
+        alreadyRunning = true;
+        var audio = new Audio('assets/music/music.mp3');
+        audio.volume = 0.1;
+        audio.loop = true;
+        audio.play();
+    }
+</script>
 </html>
