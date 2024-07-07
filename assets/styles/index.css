@@ -18,4 +18,4 @@ h1 {user-select: none;}
 body { background-color: black; font-family: cool; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden;}
 footer {width: 95%; text-align: center; color: #ffffff; font-size: 20px; font-family: 'cool';}
 a { color: rgba(53, 42, 255, 0.92); text-decoration: none;}
-hr { border: 0; height: 1px; background: rgba(53, 42, 255, 0.92); margin: 0;}
+hr { border: 0; height: 1px; background: rgba(255, 255, 255, 0.92); margin: 0;}
